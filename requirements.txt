@@ -88,8 +88,6 @@ python-dateutil==2.9.0.post0
 python-dotenv==1.0.1
 python-multipart==0.0.9
 pytz==2022.1
-PyYAML==5.4.1
-QtPy==2.4.2
 requests==2.25.1
 rich==13.7.1
 rsa==4.9
