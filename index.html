@@ -11,7 +11,7 @@
 
 <body>
     <form action="/result" method="post">
-        <h1>AI가 판단하는 오늘의 연애운</h1>
+        <h1>AI가 판단하는 연애운</h1>
         <input name="name" type="text" placeholder="이름" required><br>
         <div class="radio-group">
             <input id="male" name="sex" type="radio" value="남자" checked>
@@ -73,9 +73,13 @@ function changeShow(value) {
                 <label for="m4-j">J</label>
             </div>`;
 }
-function GetAPI() {
-    document.getElementById("btn").innerHTML="AI가 당신의 연애운을 분삭하고 있습니다"
+
+function GetAPI(event) {
+    event.preventDefault(); // 기본 동작(폼 제출)을 막음
+    document.getElementById("btn").innerHTML = `<p style="text-align: center;color: #ff6b81;text-shadow: 1px 1px 2px rgba(255, 107, 129, 0.6)">AI가 당신의 연애운을 분석하고 있습니다</p>`;
+
 }
+document.querySelector("form").addEventListener("submit", GetAPI);
 
 </script>
 </html>
