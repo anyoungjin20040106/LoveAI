@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Asset/styles.css">
+
+    <title>오늘의 연애운</title>
+</head>
+
+<body>
+    <form action="/result" method="post">
+        <h1>AI가 판단하는 오늘의 운세</h1>
+        <input name="name" type="text" placeholder="이름" required><br>
+        <div class="radio-group">
+            <input id="male" name="sex" type="radio" value="남자" checked>
+            <label for="male">남자</label>
+    
+            <input id="female" name="sex" type="radio" value="여자">
+            <label for="female">여자</label>
+        </div>
+        <div class="radio-group">
+            <input id="solo" name="type" type="radio" value="솔로" checked>
+            <label for="solo">솔로</label>
+    
+            <input id="couple" name="type" type="radio" value="커플">
+            <label for="couple">커플</label>
+        </div>
+        <div class="radio-group">
+            <input id="birthday" name="a" type="radio" value="생일" checked onclick="changeShow(this.value)">
+            <label for="birthday">생일로 사주보기</label>
+    
+            <input id="mbti" name="a" type="radio" value="MBTI" onclick="changeShow(this.value)">
+            <label for="mbti">MBTI로 사주보기</label>
+        </div>
+        <div id="type">
+            <input type="date" name="birthday" required><br>
+        </div>
+        <button>제출하기</button>
+    </form>
+</body>
+
+<script>
+function changeShow(value) {
+    document.getElementById("type").innerHTML = value === "생일" 
+        ? `<input type="date" name="birthday" required><br>`
+        : `
+            <div class="radio-group">
+                <input id="m1-i" name="m1" type="radio" value="I" checked>
+                <label for="m1-i">I</label>
+                <input id="m1-e" name="m1" type="radio" value="E">
+                <label for="m1-e">E</label>
+            </div>
+            <div class="radio-group">
+                <input id="m2-n" name="m2" type="radio" value="N" checked>
+                <label for="m2-n">N</label>
+                <input id="m2-s" name="m2" type="radio" value="S">
+                <label for="m2-s">S</label>
+            </div>
+            <div class="radio-group">
+                <input id="m3-t" name="m3" type="radio" value="T" checked>
+                <label for="m3-t">T</label>
+                <input id="m3-f" name="m3" type="radio" value="F">
+                <label for="m3-f">F</label>
+            </div>
+            <div class="radio-group">
+                <input id="m4-p" name="m4" type="radio" value="P" checked>
+                <label for="m4-p">P</label>
+                <input id="m4-j" name="m4" type="radio" value="J">
+                <label for="m4-j">J</label>
+            </div>`;
+}
+
+</script>
+</html>
