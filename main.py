@@ -22,7 +22,7 @@ def result(request:Request,name:str=Form(...),sex:str=Form(...),birthday:str=For
         text+=f"{y}년 {m}월 {d}일에 태어난"
     else:
         text+=f"MBTI가 {''.join([m1,m2,m3,m4])}인"
-    text+=f" {name}의 {datetime.today().strftime('%Y년%m월%d일')}의 연애운을 봐줘, 그사람은 {type}이며 그사람의 장점, 단점을 말해주고"
+    text+=f" {name}의 {datetime.today().strftime('%Y년%m월%d일')}의 연애운을 봐줘, 그사람은 {type}이며 그사람의 장점, 단점을 말해주고 "
     text+="연인이 생기는 "if type=="솔로" else "현제 우리 연인 관계는 어떤지 사주로 평가해주고 더 좋은 관계가 돼기 위한 "
     text+="운세를 알려줘"
     print(text)
