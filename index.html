@@ -11,7 +11,7 @@
 
 <body>
     <form action="/result" method="post">
-        <h1>AI가 판단하는 오늘의 운세</h1>
+        <h1>AI가 판단하는 오늘의 연애운</h1>
         <input name="name" type="text" placeholder="이름" required><br>
         <div class="radio-group">
             <input id="male" name="sex" type="radio" value="남자" checked>
@@ -37,7 +37,9 @@
         <div id="type">
             <input type="date" name="birthday" required><br>
         </div>
+        <div id="btn">
         <button>제출하기</button>
+    </div>
     </form>
 </body>
 
@@ -70,6 +72,9 @@ function changeShow(value) {
                 <input id="m4-j" name="m4" type="radio" value="J">
                 <label for="m4-j">J</label>
             </div>`;
+}
+function GetAPI() {
+    document.getElementById("btn").innerHTML="AI가 당신의 연애운을 분삭하고 있습니다"
 }
 
 </script>
